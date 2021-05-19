@@ -12,6 +12,8 @@ class Welcome extends MY_Controller
 
 	public function index()
 	{
+		$this->data['ENVIRONMENT'] = ENVIRONMENT;
+		$this->data['CI_VERSION'] = CI_VERSION;
 		$this->twig->display('welcome_message', $this->data);
 	}
 }
